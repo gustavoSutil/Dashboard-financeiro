@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <title>Carteira</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <script src="./yahoo.js"></script>
+</head>
+
+<body class="bg-dark text-light">
+  <header>
+    <!-- place navbar here -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed">
+          <div class="container">
+            <a class="navbar-brand" href="#">Dashboard financeiro</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                    <button class="btn btn-outline-primary m-3 my-2 my-sm-0" type="submit">Registrar Aporte</button>
+                    <button class="btn btn-outline-success m-3 my-2 my-sm-0" type="submit">Registrar Saque</button>
+                </ul>
+            </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    
+    <!-- quantity of money -->
+
+    <div class="container">
+        <div class="row align-items-center mt-3">
+            <div id="moneyResult" class="col align-items-start">
+                <label for="" class="form-label">Valorização</label>
+                <h3>R$10.000,00 (-1,50%)</h3>
+            </div>
+            <div id="moneyResult" class="col align-items-end">
+                <label for="" class="form-label">Dólar hoje</label>
+                  <div style="display:flex;">
+                    <h3 id="dolarPrice">R$0,00&ensp;</h3>
+                    <h3 id="priceVariation">(+0.00%)</h3>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+      
+       <!-- grafico divisao% -->
+      
+       <div class="row align-items-center">
+        <canvas id="myChart" width="300" height="200"></canvas>
+      </div>
+      <div class="row align-items-end">
+        <div class="col"></div>
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="triggerId" data-bs-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                    fazer script
+        </button>
+        <div class="dropdown-menu" aria-labelledby="triggerId">
+            <a class="dropdown-item" href="#">Todo o período</a>
+            <a class="dropdown-item" href="#">Mês</a>
+            <a class="dropdown-item" href="#">6 meses</a>
+            <a class="dropdown-item" href="#">1 ano</a>
+        </div>
+      </div>
+    </div>
+    </div>
+
+   <!-- grafico evolução patrimonial -->
+      
+   <div class="row align-items-center">
+    <canvas id="myChart" width="300" height="200"></canvas>
+  </div>
+  <div class="row align-items-end">
+  <div class="col"></div>
+  <div class="dropdown col">
+      <button class="btn btn-primary dropdown-toggle" type="button" id="triggerId" data-bs-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+                  fazer script
+      </button>
+      <div class="dropdown-menu" aria-labelledby="triggerId">
+          <a class="dropdown-item" href="#">Tipo de investimento</a>
+          <a class="dropdown-item" href="#">% cartrira ação</a>
+          <a class="dropdown-item" href="#">País</a>
+      </div>
+  </div>
+</div>
+     
+
+    <div class="container">
+      <div class="row m-3 align-items-end">
+        <h3 class="card-title text-start">Posições</h3>
+      </div>
+    </div>
+
+    <!--nagation-->
+    <div class="container">
+      <div class="card text-center">
+        <div class="card-header">
+          <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="true" href="#">Active tab</a>
+            </li>
+            <li class="nav-item">  
+              <a class="nav-link" href="#">Tab</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled tab</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body ">
+          <div class="table-responsive-lg">
+            <table class="table table-striped
+            table-hover	
+            table-borderless
+            table-primary
+            align-middle">
+              <thead class="table-dark">
+                <tr>
+                  <th>COD</th>
+                  <th>QTD</th>
+                  <th>PM</th>
+                  <th>=</th>
+                  <th>%</th>
+                </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                  
+                  <tr class="table-success" >
+                    <td scope="row">ENBR</td>
+                    <td>35</td>
+                    <td>R$17,35</td>
+                    <td>R$64,30</td>
+                    <td>Item</td>
+                  </tr>
+
+                  <tr class="table-info">
+                    <td scope="row">Item</td>
+                    <td>Item</td>
+                    <td>Item</td>
+                    <td>Item</td>
+                    <td>Item</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  
+                </tfoot>
+            </table>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <footer>
+    <!-- place footer here -->
+    
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
