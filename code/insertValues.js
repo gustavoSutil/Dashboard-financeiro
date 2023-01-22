@@ -1,8 +1,14 @@
+let totalPrice = {
+    'br' : ['br',0],
+    'usd' : ['usd',0],
+    'n investido' : ['n investido',0],
+    'outros': ['outros',0],
+    'total' : ['total',0]
+};
 
-let totalPrice = 0;
+let totalAcao = {
 
-
-
+}
 
 
 
@@ -31,15 +37,42 @@ acao.then(function(listStocks){
 
 function insertInTable(dataWallet,dataStock){
     let total = (dataStock.bid-dataWallet.price_medium)*dataWallet.quantity
+    let cod = dataWallet.COD;
     document.getElementById("table-stocks")
         .insertAdjacentHTML(
         'beforeEnd',
         '<tr class="table-success">\
-            <td scope="row">'+dataWallet.COD+'</td>\
+            <td scope="row">'+cod+'</td>\
             <td>'+dataWallet.quantity+'</td>\
-            <td>R$'+dataWallet.price_medium+'</td>\
-            <td>R$'+dataStock.bid+'</td>\
-            <td name="end" >R$'+total.toString()+'</td>\
+            <td>R$ '+priceFormat(dataWallet.price_medium)+'</td>\
+            <td>R$ '+priceFormat(dataStock.bid)+'</td>\
+            <td name="end" >R$ '+priceFormat(total)+'</td>\
         </tr>');
-    totalPrice+=total;
+    totalPrice.total+=total;
+    totalAcao.cod = total;
+}
+
+
+const data = {
+    labels: [
+      'Red',
+      'Blue',
+      'Yellow'
+    ],
+    datasets: [{
+      label: 'My First Dataset',
+      data: [300, 50, 100],
+    backgroundColor: [
+        'rgb(255, 99, 132)',
+        'rgb(54, 162, 235)',
+        'rgb(255, 205, 86)'
+    ],
+    hoverOffset: 4
+    }]
+};
+
+
+const config = {
+    type: 'pie',
+    data: data,
 }

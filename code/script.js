@@ -1,3 +1,7 @@
+function priceFormat(aux){
+	return aux.toFixed(2).replace('.',',');
+}
+
 
 
 //headers e configuration of api request
@@ -62,8 +66,8 @@ function showValuesUSD(){
 	let variation = ((USDprice-previousPrice)/previousPrice)*100;
 	let signal = checkSignal(variation);
 	let variationTag = document.getElementById('priceVariation');
-	document.getElementById('dolarPrice').innerText = "R$ " + USDprice.toFixed(2).replace('.',',') + "\240";
-	variationTag.innerText = "(" + signal + variation.toFixed(2).replace('.',',') + "\%" + ")";
+	document.getElementById('dolarPrice').innerText = "R$ " + priceFormat(USDprice) + "\240";
+	variationTag.innerText = "(" + signal + priceFormat(variation) + "\%" + ")";
 	variationTag.style = signal=='+' ? "color:green" : "color:red";
 }
 
