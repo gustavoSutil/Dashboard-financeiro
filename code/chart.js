@@ -1,14 +1,14 @@
-var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
-var yValues = [55, 49, 44, 24, 15];
-var barColors = [
-  "#b91d47",
-  "#00aba9",
-  "#2b5797",
-  "#e8c3b9",
-  "#1e7145"
-];
-
-new Chart("myChart", {
+function addGraph(){
+  var xValues = dataName;
+  var yValues = dataValue;
+  var barColors = [
+    "#b91d47",
+    "#00aba9",
+    "#2b5797",
+    "#e8c3b9",
+    "#1e7145"
+  ];
+  new Chart("myChart", {
   type: "pie",
   data: {
     labels: xValues,
@@ -19,8 +19,8 @@ new Chart("myChart", {
   },
   options: {
     title: {
-      display: true,
-      text: "World Wide Wine Production 2018"
+      display: false,
     }
   }
 });
+}

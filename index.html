@@ -10,7 +10,7 @@
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
   integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-
+  <link rel="stylesheet" href="/code/styles.css">
 
 
 </head>
@@ -48,7 +48,7 @@
             <div id="moneyResult" class="col align-items-end">
                 <label for="" class="form-label">Dólar hoje</label>
                   <div style="display:flex;">
-                    <h3 id="dolarPrice">R$0,00&ensp;</h3>
+                    <h3 id="dolarPrice">R$0,00&ensp; </h3>
                     <h3 id="priceVariation">(+0.00%)</h3>
                   </div>
             </div>
@@ -60,7 +60,7 @@
        <!-- grafico divisao% -->
       
        <div class="row align-items-center">
-        <canvas id="myChart" width="300" height="200"></canvas>
+        <canvas id="myChart"></canvas>
       </div>
       <div class="row align-items-end">
         <div class="col"></div>
@@ -82,10 +82,11 @@
    <!-- grafico evolução patrimonial -->
       
    <div class="row align-items-center">
-    <canvas id="myChart" width="300" height="200"></canvas>
+    <!--canvas id="myChart"></canvas-->
   </div>
   <div class="row align-items-end">
   <div class="col"></div>
+  <!--
   <div class="dropdown col">
       <button class="btn btn-primary dropdown-toggle" type="button" id="triggerId" data-bs-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">
@@ -97,6 +98,7 @@
           <a class="dropdown-item" href="#">País</a>
       </div>
   </div>
+  -->
 </div>
      
 
@@ -105,7 +107,7 @@
         <h3 class="card-title text-start">Posições</h3>
       </div>
     </div>
-
+<!--bs5-modal-toggle-->
     <!--nagation-->
     <div class="container">
       <div class="card text-center">
@@ -137,8 +139,14 @@
                 </tr>
                 </thead>
                 <tbody id="table-stocks"  class="table-group-divider">
-
-
+                  <tr class="table-info">
+                    <td scope="row">Item</td>
+                    <td>Item</td>
+                    <td>Item</td>
+                    <td>Item</td>
+                    <td>Item</td>
+                  </tr>
+                  
                   <tr class="table-info">
                     <td scope="row">Item</td>
                     <td>Item</td>
@@ -166,7 +174,19 @@
     <div class="container">
       <div class="card text-center">
         <div class="card-header">
-          
+        $<div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+            </div>
+          </div>
+          </div>
         </div>
       </div>
     </div>
@@ -178,6 +198,9 @@
     <!-- place footer here -->
     
   </footer>
+  <!-- const of security -->
+  <script src="./code/env.js"></script>
+
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">

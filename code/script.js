@@ -14,7 +14,7 @@ const options = {
 	method: 'POST',
 	headers: {
 		'content-type': 'application/x-www-form-urlencoded',
-		'X-RapidAPI-Key': 'd48707962dmsh0353d3f6203e5f2p1c9204jsn9ed4f398e150',
+		'X-RapidAPI-Key': Yahoo_RapidAPI_Key,
 		'X-RapidAPI-Host': 'yahoo-finance97.p.rapidapi.com'
 	},
 	body: encodedParams
